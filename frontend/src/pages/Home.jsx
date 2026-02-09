@@ -1,22 +1,12 @@
-import care_health from "../assets/insurers/care_health_insurance_logo.png";
-import hdfc_ergo from "../assets/insurers/hdfc_ergo_insurance_logo.png";
-import icici_lombard from "../assets/insurers/icici_lombrad_insurance_logo.jpg";
-import sbi_general from "../assets/insurers/sbi_general_insurance_logo.jpg";
-import tata_aig from "../assets/insurers/tata_aig_insurance_logo.jpg";
-import niva_bupa from "../assets/insurers/niva_bupa_insurance_logo.png";
-import national_insurance from "../assets/insurers/national_insurance_logo.png";
-import adithya_birla from "../assets/insurers/adithya_birla_capital_insurance_logo.jpg";
-import manipal_cigna from "../assets/insurers/manipal_cigna_insuracne_logo.png";
-import star_health from "../assets/insurers/star_health_insurance_logo.png";
-
-import GetInsuranceForm from "../components/GetInsuranceForm";
-
 import whyHealexBg from "../assets/family_image.jpg";
 import logoIcon from "../assets/healex_logo.jpeg";
 import { FaWhatsapp } from "react-icons/fa";
 import { FaPhoneAlt } from "react-icons/fa";
 import { FaEnvelope } from "react-icons/fa";
 import heroImage from "../assets/hero_images/hero_image_2.jpeg";
+import OurServices from "../components/OurServices";
+import InsurancePartners from "../components/InsurancePartners";
+import GetInsuranceForm from "../components/GetInsuranceForm";
 
 export default function Home() {
   return (
@@ -60,30 +50,9 @@ export default function Home() {
 
       </section>
 
-
       {/* INSURANCE PARTNERS */}
-      <section className="py-14 bg-white">
-        <div className="max-w-6xl mx-auto px-6 text-center">
-          <p className="text-gray-500 font-medium mb-6">
-            Our Insurance Partners
-          </p>
+      <InsurancePartners />
 
-          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-8 items-center">
-            {[care_health, tata_aig, hdfc_ergo, sbi_general, icici_lombard, niva_bupa, national_insurance, adithya_birla, manipal_cigna, star_health].map((logo, index) => (
-              <div
-                key={index}
-                className="flex justify-center items-center border rounded-lg py-6 bg-white"
-              >
-                <img
-                  src={logo}
-                  alt="Insurance Partner"
-                  className="h-16 object-contain"
-                />
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
 
       {/* ABOUT US */}
       <section className="py-20 bg-white" id="about">
@@ -109,64 +78,63 @@ export default function Home() {
         </div>
       </section>
 
-
       {/* SERVICES */}
-      <section className="py-20 bg-primaryLight" id="services">
-        <div className="max-w-6xl mx-auto px-6">
-          <h2 className="text-3xl font-bold text-center mb-12 text-primaryDark">
-            Our Services
-          </h2>
-
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {[
-              "Health Insurance Advisory",
-              "Policy Comparison (Multiple Companies)",
-              "Family & Senior Citizen Plans",
-              "Corporate Health Insurance",
-              "Renewal & Upgrade Support",
-              "End-to-End Claim Assistance",
-            ].map((service, index) => (
-              <div
-                key={index}
-                className="bg-white p-6 rounded-xl shadow-sm text-center"
-              >
-                <p className="font-medium text-gray-800">{service}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
+      <OurServices />
 
       {/* WHY HEALEX */}
       <section
         className="relative py-20 bg-fixed bg-center bg-cover"
-        style={{
-          backgroundImage: `url(${whyHealexBg})`,
-        }}
+        style={{ backgroundImage: `url(${whyHealexBg})` }}
       >
         {/* Overlay */}
         <div className="absolute inset-0 bg-white/45"></div>
 
         {/* Content */}
         <div className="relative z-10 max-w-6xl mx-auto px-6">
-          <h2 className="text-3xl font-bold text-center mb-12 text-primaryDark">
-            Why Healex?
+          <h2 className="text-4xl font-bold text-center mb-4 text-primaryDark">
+            Why People Trust Healex?
           </h2>
+
+          <p className="text-center text-gray-700 max-w-2xl mx-auto mb-12">
+            Because health insurance deserves clarity, care, and support you can rely on.
+          </p>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-4xl mx-auto">
             {[
-              "Health insurance experts (not general agents)",
-              "Honest & transparent advice",
-              "Multiple company options",
-              "Strong claim-time support",
-              "Long-term relationship focus",
-            ].map((point, index) => (
+              {
+                title: "Dedicated Health Insurance Specialists",
+                desc: "Focused expertise — not generic advice.",
+              },
+              {
+                title: "Honest, Unbiased Guidance",
+                desc: "Recommendations made for you, not commissions.",
+              },
+              {
+                title: "Carefully Chosen Insurer Options",
+                desc: "Partners selected for reliability and claim performance.",
+              },
+              {
+                title: "Support That Stays With You During Claims",
+                desc: "We guide you through every step, till resolution.",
+              },
+              {
+                title: "Long-Term Advisory Relationship",
+                desc: "Support that continues well beyond purchase.",
+              },
+            ].map((item, index) => (
               <div
                 key={index}
-                className="flex items-start gap-3 bg-primaryLight/90 p-5 rounded-xl shadow-sm"
+                className="flex gap-4 bg-primaryLight/90 p-6 rounded-xl shadow-sm"
               >
-                <span className="text-primary font-bold">✓</span>
-                <p className="text-gray-800">{point}</p>
+                <span className="text-primary text-xl font-bold">✓</span>
+                <div>
+                  <h3 className="font-semibold text-gray-900 mb-1">
+                    {item.title}
+                  </h3>
+                  <p className="text-gray-700 text-sm leading-relaxed">
+                    {item.desc}
+                  </p>
+                </div>
               </div>
             ))}
           </div>
