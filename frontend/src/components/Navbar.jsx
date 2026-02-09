@@ -1,4 +1,3 @@
-import healexLogo from "../assets/healex_logo_text.jpeg";
 import logoIcon from "../assets/healex_logo.jpeg";
 import { useState } from "react";
 import { FaWhatsapp } from "react-icons/fa";
@@ -43,7 +42,7 @@ export default function Navbar() {
             href="https://wa.me/917356245467"
             className="bg-white text-primary font-semibold px-4 py-2 rounded-lg hidden md:block"
           >
-            WhatsApp
+            <FaWhatsapp className="text-2xl font-extrabold" />
           </a>
 
           {/* HAMBURGER (Mobile) */}
@@ -68,7 +67,7 @@ export default function Navbar() {
             href="https://wa.me/917356245467"
             className="inline-block bg-white text-primary font-semibold px-4 py-2 rounded-lg"
           >
-            WhatsApp
+            <FaWhatsapp className="text-2xl font-extrabold" />
           </a>
         </div>
       )}

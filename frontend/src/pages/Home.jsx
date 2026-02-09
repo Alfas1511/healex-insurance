@@ -10,72 +10,51 @@ import manipal_cigna from "../assets/insurers/manipal_cigna_insuracne_logo.png";
 import star_health from "../assets/insurers/star_health_insurance_logo.png";
 
 import GetInsuranceForm from "../components/GetInsuranceForm";
+
 import whyHealexBg from "../assets/family_image.jpg";
-import healexLogo from "../assets/healex_logo_text.jpeg";
-import healexWhiteLogo from "../assets/healex_white_logo.jpeg";
 import logoIcon from "../assets/healex_logo.jpeg";
 import { FaWhatsapp } from "react-icons/fa";
 import { FaPhoneAlt } from "react-icons/fa";
 import { FaEnvelope } from "react-icons/fa";
-import heroVideo from "../assets/hero_video_1.mp4";
+import heroImage from "../assets/hero_images/hero_image_2.jpeg";
 
 export default function Home() {
   return (
     <div>
-      {/* HERO SECTION */}
-      {/* <section className="bg-primary text-white py-24">
-        <div className="max-w-6xl mx-auto px-6 text-center">
-          <h1 className="text-4xl md:text-5xl font-bold mb-4">
-            Healex – Health Insurance, Made Simple
-          </h1>
-
-          <p className="text-lg md:text-xl mb-8">
-            Choose the right health insurance from multiple companies — with expert guidance and claim support.
-          </p>
-
-          <a
-            href="https://wa.me/917356245467"
-            className="inline-block bg-white text-primary font-semibold px-8 py-4 rounded-xl shadow-md"
-          >
-            Talk to a Healex Expert
-          </a>
-        </div>
-      </section> */}
-
-      {/* HERO SECTION WITH VIDEO */}
+      {/* HERO SECTION WITH IMAGE */}
       <section className="relative h-[90vh] min-h-[600px] overflow-hidden pt-24">
 
-        {/* BACKGROUND VIDEO */}
-        <video
-          autoPlay
-          loop
-          muted
-          playsInline
-          className="absolute inset-0 w-full h-full object-cover"
-        >
-          <source src={heroVideo} type="video/mp4" />
-        </video>
+        {/* BACKGROUND IMAGE */}
+        <div
+          className="absolute inset-0 bg-cover bg-center"
+          style={{ backgroundImage: `url(${heroImage})`, filter: "contrast(1.05) saturate(1.05)" }}
+        ></div>
+
 
         {/* OVERLAY */}
-        <div className="absolute inset-0 bg-primary/80"></div>
+        <div className="absolute inset-0 bg-gradient-to-t from-primary/80 via-primary/40 to-primary/20"></div>
 
         {/* CONTENT */}
-        <div className="relative z-10 flex items-center justify-center h-full text-white">
+        <div className="relative z-10 flex items-end justify-center h-full text-white pb-16">
           <div className="max-w-6xl mx-auto px-6 text-center">
             <h1 className="text-4xl md:text-5xl font-bold mb-4">
-              Healex – Health Insurance, Made Simple
+              Healex — Clarity, Confidence, and Care
             </h1>
+            {/* <p className="text-lg md:text-xl mb-8 max-w-3xl mx-auto">Clarity, Confidence, and Care — In One Insurance Experience</p> */}
 
             <p className="text-lg md:text-xl mb-8 max-w-3xl mx-auto">
-              Choose the right health insurance from multiple companies — with expert guidance and claim support.
+              Expert guidance. Unbiased advice. Complete claim support — when it matters most.
             </p>
 
-            <a
-              href="https://wa.me/917356245467"
-              className="inline-block bg-white text-primary font-semibold px-8 py-4 rounded-xl shadow-md hover:bg-gray-100 transition"
-            >
-              Talk to a Healex Expert
-            </a>
+            <div className="flex flex-col mx-auto max-w-xs">
+              <a
+                href="https://wa.me/917356245467"
+                className="inline-block bg-white text-primary font-semibold px-8 py-4 rounded-xl shadow-md hover:bg-gray-100 transition"
+              >
+                Get Expert Advice(Free)
+              </a>
+              <small className="">No spam. No pressure. Just expert advice you can trust.</small>
+            </div>
           </div>
         </div>
 
@@ -114,16 +93,22 @@ export default function Home() {
           </h2>
 
           <p className="text-gray-700 text-lg leading-relaxed">
-            Healex is an exclusive health insurance advisory service.
-            We help individuals, families, and businesses choose the right health insurance
-            at an affordable premium by comparing plans from multiple insurance companies.
+            Healex is a health insurance advisory focused on clarity and care.
+            We help individuals, families, and businesses choose coverage that truly fits their life —
+            by comparing plans across trusted insurance providers.
           </p>
 
-          <p className="mt-6 text-xl font-semibold text-primary">
+          <p className="mt-4 text-gray-700 text-lg leading-relaxed">
+            Our role doesn’t end at purchase. We stay with you through claims and support,
+            when it matters most.
+          </p>
+
+          <p className="mt-8 text-xl font-semibold text-primary">
             We don’t push policies — we guide decisions.
           </p>
         </div>
       </section>
+
 
       {/* SERVICES */}
       <section className="py-20 bg-primaryLight" id="services">
