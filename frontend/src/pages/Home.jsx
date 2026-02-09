@@ -5,17 +5,25 @@ import sbi_general from "../assets/insurers/sbi_general_insurance_logo.jpg";
 import tata_aig from "../assets/insurers/tata_aig_insurance_logo.jpg";
 import niva_bupa from "../assets/insurers/niva_bupa_insurance_logo.png";
 import national_insurance from "../assets/insurers/national_insurance_logo.png";
+import adithya_birla from "../assets/insurers/adithya_birla_capital_insurance_logo.jpg";
+import manipal_cigna from "../assets/insurers/manipal_cigna_insuracne_logo.png";
+import star_health from "../assets/insurers/star_health_insurance_logo.png";
+
 import GetInsuranceForm from "../components/GetInsuranceForm";
 import whyHealexBg from "../assets/family_image.jpg";
 import healexLogo from "../assets/healex_logo_text.jpeg";
 import healexWhiteLogo from "../assets/healex_white_logo.jpeg";
+import logoIcon from "../assets/healex_logo.jpeg";
+import { FaWhatsapp } from "react-icons/fa";
+import { FaPhoneAlt } from "react-icons/fa";
+import { FaEnvelope } from "react-icons/fa";
+import heroVideo from "../assets/hero_video_1.mp4";
 
 export default function Home() {
   return (
     <div>
-
       {/* HERO SECTION */}
-      <section className="bg-primary text-white py-24">
+      {/* <section className="bg-primary text-white py-24">
         <div className="max-w-6xl mx-auto px-6 text-center">
           <h1 className="text-4xl md:text-5xl font-bold mb-4">
             Healex – Health Insurance, Made Simple
@@ -32,7 +40,47 @@ export default function Home() {
             Talk to a Healex Expert
           </a>
         </div>
+      </section> */}
+
+      {/* HERO SECTION WITH VIDEO */}
+      <section className="relative h-[90vh] min-h-[600px] overflow-hidden pt-24">
+
+        {/* BACKGROUND VIDEO */}
+        <video
+          autoPlay
+          loop
+          muted
+          playsInline
+          className="absolute inset-0 w-full h-full object-cover"
+        >
+          <source src={heroVideo} type="video/mp4" />
+        </video>
+
+        {/* OVERLAY */}
+        <div className="absolute inset-0 bg-primary/80"></div>
+
+        {/* CONTENT */}
+        <div className="relative z-10 flex items-center justify-center h-full text-white">
+          <div className="max-w-6xl mx-auto px-6 text-center">
+            <h1 className="text-4xl md:text-5xl font-bold mb-4">
+              Healex – Health Insurance, Made Simple
+            </h1>
+
+            <p className="text-lg md:text-xl mb-8 max-w-3xl mx-auto">
+              Choose the right health insurance from multiple companies — with expert guidance and claim support.
+            </p>
+
+            <a
+              href="https://wa.me/917356245467"
+              className="inline-block bg-white text-primary font-semibold px-8 py-4 rounded-xl shadow-md hover:bg-gray-100 transition"
+            >
+              Talk to a Healex Expert
+            </a>
+          </div>
+        </div>
+
       </section>
+
 
       {/* INSURANCE PARTNERS */}
       <section className="py-14 bg-white">
@@ -42,7 +90,7 @@ export default function Home() {
           </p>
 
           <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-8 items-center">
-            {[care_health, tata_aig, hdfc_ergo, sbi_general, icici_lombard, niva_bupa, national_insurance].map((logo, index) => (
+            {[care_health, tata_aig, hdfc_ergo, sbi_general, icici_lombard, niva_bupa, national_insurance, adithya_birla, manipal_cigna, star_health].map((logo, index) => (
               <div
                 key={index}
                 className="flex justify-center items-center border rounded-lg py-6 bg-white"
@@ -50,7 +98,7 @@ export default function Home() {
                 <img
                   src={logo}
                   alt="Insurance Partner"
-                  className="h-12 object-contain"
+                  className="h-16 object-contain"
                 />
               </div>
             ))}
@@ -59,7 +107,7 @@ export default function Home() {
       </section>
 
       {/* ABOUT US */}
-      <section className="py-20 bg-white">
+      <section className="py-20 bg-white" id="about">
         <div className="max-w-5xl mx-auto px-6 text-center">
           <h2 className="text-3xl font-bold mb-6 text-primaryDark">
             About Healex
@@ -78,7 +126,7 @@ export default function Home() {
       </section>
 
       {/* SERVICES */}
-      <section className="py-20 bg-primaryLight">
+      <section className="py-20 bg-primaryLight" id="services">
         <div className="max-w-6xl mx-auto px-6">
           <h2 className="text-3xl font-bold text-center mb-12 text-primaryDark">
             Our Services
@@ -160,20 +208,24 @@ export default function Home() {
                   YOUR HEALTH INSURANCE EXPERT
                 </p>
                 <p className="font-semibold flex items-center gap-2">
-                  📞 <a href="tel:+917356245467" className="hover:underline">
+                  <FaPhoneAlt className="text-xl" />
+                  <a href="tel:+917356245467" className="hover:underline">
                     +91 73562 45467
                   </a>
                 </p>
                 <p className="flex items-center gap-2 mt-1">
-                  ✉️ <a
+                  <FaEnvelope className="text-xl" />
+                  <a
                     href="mailto:healex.insure@gmail.com"
                     className="hover:underline"
                   >
                     healex.insure@gmail.com
                   </a>
                 </p>
+
                 <p className="flex items-center gap-2 mt-1">
-                  💬 <a
+                  <FaWhatsapp className="text-xl" />
+                  <a
                     href="https://wa.me/917356245467"
                     className="hover:underline"
                   >
@@ -184,14 +236,24 @@ export default function Home() {
 
               {/* CENTER – LOGO */}
               <div className="text-center">
-                <img
-                  src={healexWhiteLogo}
-                  alt="Healex"
-                  className="h-12 mx-auto mb-2"
-                />
-                <p className="text-sm opacity-80">
-                  Your Health Insurance Expert
-                </p>
+                <div className="flex items-center gap-4">
+                  {/* ICON */}
+                  <img
+                    src={logoIcon}
+                    alt="Healex Logo"
+                    className="h-16 w-16"
+                  />
+
+                  {/* TEXT */}
+                  <div className="leading-tight">
+                    <h1 className="text-5xl font-bold tracking-wide text-white">
+                      Healex
+                    </h1>
+                    <p className="text-xs tracking-widest text-white opacity-90">
+                      YOUR HEALTH INSURANCE EXPERT
+                    </p>
+                  </div>
+                </div>
               </div>
 
               {/* RIGHT – ADDRESS */}
