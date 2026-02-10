@@ -1,16 +1,15 @@
 export default function OurServices() {
     return (
-        <section className="py-20 bg-primary/20" id="services">
+        <section className="py-24 bg-primaryDark/90" id="services">
             <div className="max-w-6xl mx-auto px-6">
 
                 {/* Section Heading */}
-                <h2 className="text-3xl font-bold text-center mb-12 text-primary">
+                <h2 className="text-3xl md:text-4xl font-bold text-center mb-14 text-white">
                     Our Services
                 </h2>
 
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
 
-                    {/* Card */}
                     {[
                         {
                             title: "Personalised Health Insurance Advisory",
@@ -39,12 +38,25 @@ export default function OurServices() {
                     ].map((item, index) => (
                         <div
                             key={index}
-                            className="bg-primaryDark/90 p-8 rounded-xl shadow-lg text-center border border-white/10 hover:bg-primaryDark transition"
+                            className="
+                                bg-white/95 
+                                p-8 
+                                rounded-2xl 
+                                shadow-lg 
+                                text-center 
+                                border border-white/10
+                                transform 
+                                transition-all 
+                                duration-300 
+                                hover:-translate-y-2 
+                                hover:shadow-2xl
+                            "
                         >
-                            <h3 className="text-lg font-semibold text-white mb-2">
+                            <h3 className="text-lg font-semibold text-primaryDark mb-3">
                                 {item.title}
                             </h3>
-                            <p className="text-white/80 text-sm leading-relaxed">
+
+                            <p className="text-gray-700 text-sm leading-relaxed">
                                 {item.desc}
                             </p>
                         </div>
@@ -53,5 +65,6 @@ export default function OurServices() {
                 </div>
             </div>
         </section>
+
     );
 }

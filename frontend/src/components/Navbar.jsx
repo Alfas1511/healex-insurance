@@ -59,7 +59,7 @@ export default function Navbar() {
       {menuOpen && (
         <div className="md:hidden bg-primary px-6 pb-6 space-y-4 text-lg">
           <a href="#" className="block" onClick={() => setMenuOpen(false)}>Home</a>
-          <a href="#" className="block" onClick={() => setMenuOpen(false)}>Plans</a>
+          <a href="#services" className="block" onClick={() => setMenuOpen(false)}>Services</a>
           <a href="#about" className="block" onClick={() => setMenuOpen(false)}>About</a>
           <a href="#contact-form" className="block" onClick={() => setMenuOpen(false)}>Contact</a>
 

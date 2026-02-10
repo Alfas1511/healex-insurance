@@ -2,53 +2,17 @@ import logoIcon from "../assets/healex_logo.jpeg";
 import { FaWhatsapp } from "react-icons/fa";
 import { FaPhoneAlt } from "react-icons/fa";
 import { FaEnvelope } from "react-icons/fa";
-import heroImage from "../assets/background_images/hero_image_2.jpeg";
 import OurServices from "../components/OurServices";
 import InsurancePartners from "../components/InsurancePartners";
 import GetInsuranceForm from "../components/GetInsuranceForm";
 import WhyHealex from "../components/WhyHealex";
+import Hero from "../components/Hero";
 
 export default function Home() {
   return (
     <div>
       {/* HERO SECTION WITH IMAGE */}
-      <section className="relative h-[90vh] min-h-[600px] overflow-hidden pt-24">
-
-        {/* BACKGROUND IMAGE */}
-        <div
-          className="absolute inset-0 bg-cover bg-center"
-          style={{ backgroundImage: `url(${heroImage})`, filter: "contrast(1.05) saturate(1.05)" }}
-        ></div>
-
-
-        {/* OVERLAY */}
-        <div className="absolute inset-0 bg-gradient-to-t from-primary/80 via-primary/40 to-primary/20"></div>
-
-        {/* CONTENT */}
-        <div className="relative z-10 flex items-end justify-center h-full text-white pb-16">
-          <div className="max-w-6xl mx-auto px-6 text-center">
-            <h1 className="text-4xl md:text-5xl font-bold mb-4">
-              Healex — Clarity, Confidence, and Care
-            </h1>
-            {/* <p className="text-lg md:text-xl mb-8 max-w-3xl mx-auto">Clarity, Confidence, and Care — In One Insurance Experience</p> */}
-
-            <p className="text-lg md:text-xl mb-8 max-w-3xl mx-auto">
-              Expert guidance. Unbiased advice. Complete claim support — when it matters most.
-            </p>
-
-            <div className="flex flex-col mx-auto max-w-xs">
-              <a
-                href="https://wa.me/917356245467"
-                className="inline-block bg-white text-primary font-semibold px-8 py-4 rounded-xl shadow-md hover:bg-gray-100 transition"
-              >
-                Get Expert Advice(Free)
-              </a>
-              <small className="">No spam. No pressure. Just expert advice you can trust.</small>
-            </div>
-          </div>
-        </div>
-
-      </section>
+      <Hero/>
 
       {/* INSURANCE PARTNERS */}
       <InsurancePartners />
@@ -91,62 +55,77 @@ export default function Home() {
       {/* HEALEX PRE-FOOTER CONTACT */}
       <section className="bg-primary text-white">
 
-        <div className="py-14">
+        <div className="py-20 bg-primaryDark text-white">
           <div className="max-w-6xl mx-auto px-6">
 
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 items-center">
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-10 items-center">
 
               {/* LEFT – CONTACT */}
-              <div>
-                <p className="text-sm opacity-80 mb-1">
-                  Please contact
-                </p>
-                <p className="font-semibold text-lg mb-2">
-                  YOUR HEALTH INSURANCE EXPERT
-                </p>
-                <p className="font-semibold flex items-center gap-2">
-                  <FaPhoneAlt className="text-xl" />
-                  <a href="tel:+917356245467" className="hover:underline">
-                    +91 73562 45467
-                  </a>
-                </p>
-                <p className="flex items-center gap-2 mt-1">
-                  <FaEnvelope className="text-xl" />
-                  <a
-                    href="mailto:healex.insure@gmail.com"
-                    className="hover:underline"
-                  >
-                    healex.insure@gmail.com
-                  </a>
+              <div className="bg-white/5 backdrop-blur p-8 rounded-2xl shadow-lg">
+                <p className="text-sm uppercase tracking-widest opacity-70 mb-3">
+                  Get in Touch
                 </p>
 
-                <p className="flex items-center gap-2 mt-1">
-                  <FaWhatsapp className="text-xl" />
-                  <a
-                    href="https://wa.me/917356245467"
-                    className="hover:underline"
-                  >
-                    WhatsApp Support
-                  </a>
+                <p className="font-semibold text-lg mb-6 leading-relaxed">
+                  Let’s talk about your health coverage.<br />
+                  <span className="text-white/80 text-sm">
+                    Clear answers • Unbiased guidance • Long-term support
+                  </span>
                 </p>
+
+                <div className="space-y-4">
+
+                  {/* Phone */}
+                  <p className="flex items-center gap-3">
+                    <span className="bg-white/10 p-2 rounded-full">
+                      <FaPhoneAlt />
+                    </span>
+                    <a href="tel:+917356245467" className="hover:underline font-medium">
+                      +91 73562 45467
+                    </a>
+                  </p>
+
+                  {/* Email */}
+                  <p className="flex items-center gap-3">
+                    <span className="bg-white/10 p-2 rounded-full">
+                      <FaEnvelope />
+                    </span>
+                    <a
+                      href="mailto:healex.insure@gmail.com"
+                      className="hover:underline font-medium"
+                    >
+                      healex.insure@gmail.com
+                    </a>
+                  </p>
+
+                  {/* WhatsApp */}
+                  <p className="flex items-center gap-3">
+                    <span className="bg-green-500 p-2 rounded-full text-white">
+                      <FaWhatsapp />
+                    </span>
+                    <a
+                      href="https://wa.me/917356245467"
+                      className="hover:underline font-medium"
+                    >
+                      WhatsApp Support
+                    </a>
+                  </p>
+                </div>
               </div>
 
               {/* CENTER – LOGO */}
-              <div className="text-center">
+              <div className="flex justify-center">
                 <div className="flex items-center gap-4">
-                  {/* ICON */}
                   <img
                     src={logoIcon}
                     alt="Healex Logo"
                     className="h-16 w-16"
                   />
-
-                  {/* TEXT */}
                   <div className="leading-tight">
-                    <h1 className="text-5xl font-bold tracking-wide text-white">
+                    <h1 className="text-5xl font-bold tracking-wide">
                       Healex
                     </h1>
-                    <p className="text-xs tracking-widest text-white opacity-90">
+                    <p className="text-xs tracking-widest opacity-90">
                       YOUR HEALTH INSURANCE EXPERT
                     </p>
                   </div>
@@ -154,11 +133,11 @@ export default function Home() {
               </div>
 
               {/* RIGHT – ADDRESS */}
-              <div className="text-center md:text-right">
-                <p className="text-sm opacity-80 mb-1">
-                  Office Address
+              <div className="bg-white/5 backdrop-blur p-8 rounded-2xl shadow-lg text-center md:text-right">
+                <p className="text-sm uppercase tracking-widest opacity-70 mb-3">
+                  VISIT US
                 </p>
-                <p className="leading-relaxed">
+                <p className="leading-relaxed text-white/90">
                   Mathson Chambers, 2nd Floor,<br />
                   College Road,<br />
                   Kothamangalam – 686691
@@ -169,15 +148,16 @@ export default function Home() {
           </div>
         </div>
 
+
         {/* TRUST BAR */}
-        <div className="bg-primaryDark py-4">
+        {/* <div className="bg-primaryDark py-4">
           <div className="max-w-6xl mx-auto px-6 text-sm font-medium flex flex-wrap justify-center gap-4">
             <span>◆ 10+ Top Insurers</span>
             <span>◆ Right Plan</span>
             <span>◆ Expert Call</span>
             <span>◆ Lifetime Support</span>
           </div>
-        </div>
+        </div> */}
 
       </section>
 
