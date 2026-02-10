@@ -1,6 +1,12 @@
 import whyHealexBg from "../assets/background_images/bg_image_1.jpeg";
+import AOS from "aos";
+import "aos/dist/aos.css";
+import { useEffect } from "react";
 
 export default function WhyHealex() {
+    useEffect(() => {
+        AOS.init({ duration: 500, once: true });
+    }, []);
     return (
         <section
             className="relative py-20 bg-fixed bg-center bg-cover"
@@ -44,6 +50,7 @@ export default function WhyHealex() {
                     ].map((item, index, arr) => (
                         <div
                             key={index}
+                            data-aos="fade-in" data-aos-delay="200"
                             className={`flex gap-4 bg-primaryLight/90 p-6 rounded-xl shadow-sm
                   ${index === arr.length - 1 ? "md:col-span-2 md:mx-auto md:max-w-md" : ""}
                 `}>

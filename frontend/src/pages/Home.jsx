@@ -12,7 +12,7 @@ export default function Home() {
   return (
     <div>
       {/* HERO SECTION WITH IMAGE */}
-      <Hero/>
+      <Hero />
 
       {/* INSURANCE PARTNERS */}
       <InsurancePartners />
@@ -58,24 +58,24 @@ export default function Home() {
         <div className="py-20 bg-primaryDark text-white">
           <div className="max-w-6xl mx-auto px-6">
 
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-10 items-center">
+            <div className="grid grid-cols-1 lg:grid-cols-[1fr_auto_1fr] gap-10 items-stretch">
 
               {/* LEFT – CONTACT */}
-              <div className="bg-white/5 backdrop-blur p-8 rounded-2xl shadow-lg">
-                <p className="text-sm uppercase tracking-widest opacity-70 mb-3">
-                  Get in Touch
-                </p>
+              <div className="bg-white/5 backdrop-blur p-8 rounded-2xl shadow-lg flex flex-col justify-between">
+                <div>
+                  <p className="text-sm uppercase tracking-widest opacity-70 mb-3">
+                    Get in Touch
+                  </p>
 
-                <p className="font-semibold text-lg mb-6 leading-relaxed">
-                  Let’s talk about your health coverage.<br />
-                  <span className="text-white/80 text-sm">
-                    Clear answers • Unbiased guidance • Long-term support
-                  </span>
-                </p>
+                  <p className="font-semibold text-lg mb-6 leading-relaxed">
+                    Let’s talk about your health coverage.<br />
+                    <span className="text-white/80 text-sm">
+                      Clear answers • Unbiased guidance • Long-term support
+                    </span>
+                  </p>
+                </div>
 
-                <div className="space-y-4">
-
-                  {/* Phone */}
+                <div className="space-y-4 mt-6">
                   <p className="flex items-center gap-3">
                     <span className="bg-white/10 p-2 rounded-full">
                       <FaPhoneAlt />
@@ -85,28 +85,20 @@ export default function Home() {
                     </a>
                   </p>
 
-                  {/* Email */}
                   <p className="flex items-center gap-3">
                     <span className="bg-white/10 p-2 rounded-full">
                       <FaEnvelope />
                     </span>
-                    <a
-                      href="mailto:healex.insure@gmail.com"
-                      className="hover:underline font-medium"
-                    >
+                    <a href="mailto:healex.insure@gmail.com" className="hover:underline font-medium">
                       healex.insure@gmail.com
                     </a>
                   </p>
 
-                  {/* WhatsApp */}
                   <p className="flex items-center gap-3">
-                    <span className="bg-green-500 p-2 rounded-full text-white">
+                    <span className="bg-green-500 p-2 rounded-full">
                       <FaWhatsapp />
                     </span>
-                    <a
-                      href="https://wa.me/917356245467"
-                      className="hover:underline font-medium"
-                    >
+                    <a href="https://wa.me/917356245467" className="hover:underline font-medium">
                       WhatsApp Support
                     </a>
                   </p>
@@ -114,17 +106,11 @@ export default function Home() {
               </div>
 
               {/* CENTER – LOGO */}
-              <div className="flex justify-center">
+              <div className="flex justify-center items-center">
                 <div className="flex items-center gap-4">
-                  <img
-                    src={logoIcon}
-                    alt="Healex Logo"
-                    className="h-16 w-16"
-                  />
-                  <div className="leading-tight">
-                    <h1 className="text-5xl font-bold tracking-wide">
-                      Healex
-                    </h1>
+                  <img src={logoIcon} alt="Healex Logo" className="h-16 w-16" />
+                  <div>
+                    <h1 className="text-5xl font-bold tracking-wide">Healex</h1>
                     <p className="text-xs tracking-widest opacity-90">
                       YOUR HEALTH INSURANCE EXPERT
                     </p>
@@ -133,9 +119,9 @@ export default function Home() {
               </div>
 
               {/* RIGHT – ADDRESS */}
-              <div className="bg-white/5 backdrop-blur p-8 rounded-2xl shadow-lg text-center md:text-right">
+              <div className="bg-white/5 backdrop-blur p-8 rounded-2xl shadow-lg flex flex-col justify-center text-center">
                 <p className="text-sm uppercase tracking-widest opacity-70 mb-3">
-                  VISIT US
+                  Visit Us
                 </p>
                 <p className="leading-relaxed text-white/90">
                   Mathson Chambers, 2nd Floor,<br />
@@ -147,7 +133,6 @@ export default function Home() {
             </div>
           </div>
         </div>
-
 
         {/* TRUST BAR */}
         {/* <div className="bg-primaryDark py-4">

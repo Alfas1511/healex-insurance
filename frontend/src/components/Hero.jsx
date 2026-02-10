@@ -19,12 +19,12 @@ export default function Hero() {
 
                     {/* SLOGAN */}
                     <h1 className="text-4xl md:text-5xl font-semibold tracking-tight leading-tight mb-2 drop-shadow-sm animate-fadeIn">
-                        “Clarity, Confidence, and Care”
+                        Clarity, Confidence, and Care
                     </h1>
 
                     {/* BRAND */}
                     <p className="text-sm md:text-base font-medium tracking-widest uppercase opacity-80 mb-6 animate-fadeIn delay-150">
-                        by Healex
+                        - Healex
                     </p>
 
                     {/* SUBTEXT */}

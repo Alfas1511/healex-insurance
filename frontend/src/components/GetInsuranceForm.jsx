@@ -15,7 +15,7 @@ export default function GetInsuranceForm() {
                 </div>
 
                 {/* Form Card */}
-                <div className="bg-white shadow-xl rounded-2xl p-10 border border-primary/10">
+                <div className="bg-primary/20 shadow-xl rounded-2xl p-10 border border-primary/80">
                     <form className="space-y-6">
 
                         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
