@@ -1,6 +1,6 @@
 export default function GetInsuranceForm() {
     return (
-        <section className="py-24 bg-primaryLight" id="contact-form">
+        <section className="py-16 bg-primaryLight" id="contact-form">
             <div className="max-w-4xl mx-auto px-6">
 
                 {/* Header */}

@@ -7,6 +7,8 @@ import InsurancePartners from "../components/InsurancePartners";
 import GetInsuranceForm from "../components/GetInsuranceForm";
 import WhyHealex from "../components/WhyHealex";
 import Hero from "../components/Hero";
+import FoundationOfTrust from "../components/FoudationOfTrust";
+import Testimonials from "../components/Testimonials";
 
 export default function Home() {
   return (
@@ -48,6 +50,11 @@ export default function Home() {
       {/* WHY HEALEX */}
       <WhyHealex />
 
+      {/* PROOF */}
+      <FoundationOfTrust />
+
+      {/* TESTIMONIALS */}
+      <Testimonials />
 
       {/* CONTACT FORM */}
       <GetInsuranceForm />
